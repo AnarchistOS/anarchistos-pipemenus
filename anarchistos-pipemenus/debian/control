@@ -1,0 +1,14 @@
+Source: anarchistos-pipemenus
+Section: misc
+Priority: extra
+Maintainer: AreYouLoco? <areyouloco@paranoici.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://www.anarchistos.tk/
+
+Package: anarchistos-pipemenus
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openbox, zenity, terminator, wget, compton, curl, tar, python, python-paramiko, mesa-utils
+Description: various Openbox pipemenus.
+ Contains various Openbox pipemenus for use with
+ AnarchistOS.

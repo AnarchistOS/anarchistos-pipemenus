@@ -1,0 +1,42 @@
+#!/bin/bash
+# ---------------------------------------------------------------------
+# An Openbox pipemenu to use along with LibreOffice and AnarchistOS
+# Written for CrunchBang Linux <http://crunchbang.org/>
+# by Philip Newborough (aka corenominal) <mail@philipnewborough.co.uk>
+# Ported to #!++ <https://crunchbangplusplus.org>
+# by Ben Young <computermouth@crunchbangplusplus.org>
+# Ported to AnarchistOS <https://www.anarchistos.tk>
+# by AreYouLoco? <areyouloco@paranoici.org>
+
+# ---------------------------------------------------------------------
+
+if ! . anarchistos-include.cfg 2> /dev/null; then
+    echo '  Failed to locate anarchistos-include.cfg in PATH' >&2
+    exit 1
+fi
+
+if [[ $1 = '--install' ]]; then
+    terminator --title='Install LibreOffice' --command='anarchistos-libreoffice-pipemenu --install-lo'
+
+elif [[ $1 = '--install-lo' ]]; then
+    promptInstall 'LIBREOFFICE' 'LibreOffice' 'anarchistos-meta-libreoffice'
+
+else
+    # Pipemenu
+    menuStart
+
+    tools=('writer' 'calc' 'impress' 'draw' 'base')
+
+    for curTool in "${tools[@]}"; do
+        if type "lo$curTool" &> /dev/null; then
+            INSTALLED=true
+            menuItem "${curTool^}" "lo$curTool"
+        fi
+    done
+
+    [[ ! $INSTALLED ]] &&
+        menuItem 'Install LibreOffice' 'anarchistos-libreoffice-pipemenu --install'
+
+    menuEnd
+fi
+exit 0
