@@ -1,13 +1,14 @@
-anarchistos-pipemenus (1.2) unstable; urgency=low
+anarchistos-pipemenus (1.2) crowbar; urgency=low
 
   * Initial Release for AnarchistOS.
   * Ported to AnarchistOS.
 
- -- AreYouLoco? <areyouloco@paranoici.org>  Sun, 23 Dec 2018 12:43:23 +0100
+ -- AreYouLoco? <areyouloco@paranoici.org>  Sun, 23 Dec 2018 15:22:56 +0100
 
 cbpp-pipemenus (1.1) unstable; urgency=low
-  * Dropbox pipemenu fixed
-	- Thanks /u/xa2rd!
+  * Dropbox pipemenu fixed (Thanks /u/xa2rd!)
+	
+ -- computermouth <computermouth@crunchbangplusplus.org>  ???
 
 cbpp-pipemenus (1.0) unstable; urgency=low
 

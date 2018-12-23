@@ -1,5 +1,5 @@
 #!/bin/bash
-# anarchistos-compton
+# --------------------------------------------------------------------
 # Openbox Pipe Menu for use with compton compositor
 # Written for CrunchBang Linux <http://crunchbang.org/>
 # by Philip Newborough <corenominal@corenominal.org>
@@ -7,6 +7,7 @@
 # by Ben Young <computermouth@crunchbangplusplus.org>
 # Ported to AnarchistOS <https://www.anarchistos.tk>
 # by AreYouLoco? <areyouloco@paranoici.org>
+# --------------------------------------------------------------------
 
 RESTART_ATTEMPTS=20
 
